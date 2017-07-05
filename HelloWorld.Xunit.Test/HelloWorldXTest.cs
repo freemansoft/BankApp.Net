@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace BankLibrary.XUnitTest
+namespace HelloWorld.Xunit.Test
 {
     public class HelloWorldXTest
     {

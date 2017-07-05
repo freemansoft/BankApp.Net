@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C8B472DE-5BE6-4F0B-A77F-290EF5CA8220}</ProjectGuid>
+    <ProjectGuid>{8AA50D2B-9FC8-484E-B6C2-22D716545960}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BankLibrary.BDD.Test</RootNamespace>
-    <AssemblyName>BankLibrary.BDD.Test</AssemblyName>
+    <RootNamespace>HelloWorld.BDD.Test</RootNamespace>
+    <AssemblyName>HelloWorld.BDD.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -60,16 +60,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelloWorld.feature.cs">
+      <DependentUpon>HelloWorld.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="HelloWorldSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="HelloWorld.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>HelloWorld.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BankLibrary\BankLibrary.csproj">
-      <Project>{64b132b5-7b38-49f6-9246-455908457bc1}</Project>
-      <Name>BankLibrary</Name>
+    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj">
+      <Project>{c0262181-90ca-46d6-84df-e256a1405152}</Project>
+      <Name>HelloWorld</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

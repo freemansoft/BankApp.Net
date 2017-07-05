@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
-namespace BankLibrary.BDD.Test
+namespace HelloWorld.BDD.Test
 {
     [Binding]
     public class HelloWorldSteps

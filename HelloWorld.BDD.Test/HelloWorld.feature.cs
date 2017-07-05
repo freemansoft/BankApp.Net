@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace BankLibrary.BDD.Test
+namespace HelloWorld.BDD.Test
 {
     using TechTalk.SpecFlow;
     
@@ -47,7 +47,7 @@ namespace BankLibrary.BDD.Test
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "HelloWorld")))
             {
-                global::BankLibrary.BDD.Test.HelloWorldFeature.FeatureSetup(null);
+                global::HelloWorld.BDD.Test.HelloWorldFeature.FeatureSetup(null);
             }
         }
         
@@ -68,12 +68,12 @@ namespace BankLibrary.BDD.Test
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Say Hello to Someone")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("BDD Say Hello to Someone")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "HelloWorld")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void SayHelloToSomeone()
+        public virtual void BDDSayHelloToSomeone()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Say Hello to Someone", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BDD Say Hello to Someone", new string[] {
                         "mytag"});
 #line 5
 this.ScenarioSetup(scenarioInfo);

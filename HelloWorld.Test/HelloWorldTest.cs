@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BankLibrary.Test
+namespace HelloWorld.Test
 {
     [TestClass]
     public class HelloWorldTest
     {
         [TestMethod]
-        public void TestSayHellowToSomeone()
+        public void HelloWorld_SayHelloToSomeone()
         {
             // given we wish to say hello
             HelloWorld testObject = new HelloWorld();
