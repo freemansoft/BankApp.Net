@@ -7,17 +7,22 @@ namespace Exercises.Xunit.Test
     public class WorldGreetingTest
     {
         [Fact(Skip = "not implemented")]
-        public void SayHelloToSomeone()
+        public void WorldGreeting_SayHelloToSomeone()
         {
         }
 
         [Fact(Skip = "not implemented")]
-        public void NullName()
+        public void WorldGreeting_NoTranslatorProvided()
         {
         }
 
         [Fact(Skip = "not implemented")]
-        public void TestSpanish()
+        public void WorldGreeting_NoNameProvided()
+        {
+        }
+
+        [Fact(Skip = "not implemented")]
+        public void WorldGreeting_TestSpanish()
         {
         }
 

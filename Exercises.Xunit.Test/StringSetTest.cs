@@ -4,13 +4,11 @@ using Moq;
 
 namespace Exercises.Xunit.Test
 {
-    public class HelloWorldTest
+    public class StringSetTest
     {
         [Fact(Skip = "not implemented")]
-        public void HelloWorld_SayHelloToSomeone()
+        public void StringSet_AddStringToSet()
         {
-            HelloWorld testObject = new HelloWorld();
-
         }
     }
 }

@@ -9,6 +9,13 @@ namespace Exercises.Test
     {
 
         [TestMethod]
+        public void WorldGreeting_SayHelloToSomeone()
+        {
+            Assert.Inconclusive("not implemented");
+        }
+
+
+        [TestMethod]
         public void WorldGreeting_NoTranslatorProvided()
         {
             Assert.Inconclusive("not implemented");

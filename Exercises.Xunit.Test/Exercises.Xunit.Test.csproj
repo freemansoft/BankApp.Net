@@ -7,8 +7,8 @@
     <ProjectGuid>{C5D2C190-468A-4C6A-8316-08AEAF0AE020}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HelloWorld.Xunit.Test</RootNamespace>
-    <AssemblyName>HelloWorld.Xunit.Test</AssemblyName>
+    <RootNamespace>Exercises.Xunit.Test</RootNamespace>
+    <AssemblyName>Exercies.Xunit.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -69,10 +69,13 @@
     <Compile Include="HelloWorldExampleTest.cs" />
     <Compile Include="HelloWorldTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringSetExampleTest.cs" />
     <Compile Include="WorldGreetingExampleTest.cs" />
+    <Compile Include="StringSetTest.cs" />
     <Compile Include="WorldGreetingTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

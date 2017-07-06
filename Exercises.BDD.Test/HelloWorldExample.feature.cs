@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace HelloWorld.BDD.Test
+namespace Exercises.BDD.Test
 {
     using TechTalk.SpecFlow;
     
@@ -18,7 +18,7 @@ namespace HelloWorld.BDD.Test
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class HelloWorldFeature
+    public partial class HelloWorldExampleFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -30,7 +30,7 @@ namespace HelloWorld.BDD.Test
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "HelloWorld", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "HelloWorldExample", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -45,9 +45,9 @@ namespace HelloWorld.BDD.Test
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "HelloWorld")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "HelloWorldExample")))
             {
-                global::HelloWorld.BDD.Test.HelloWorldFeature.FeatureSetup(null);
+                global::Exercises.BDD.Test.HelloWorldExampleFeature.FeatureSetup(null);
             }
         }
         
@@ -68,12 +68,12 @@ namespace HelloWorld.BDD.Test
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("BDD Say Hello to Someone")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "HelloWorld")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Example - Hello World - Say Hello to Someone")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "HelloWorldExample")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void BDDSayHelloToSomeone()
+        public virtual void Example_HelloWorld_SayHelloToSomeone()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BDD Say Hello to Someone", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Example - Hello World - Say Hello to Someone", new string[] {
                         "mytag"});
 #line 5
 this.ScenarioSetup(scenarioInfo);

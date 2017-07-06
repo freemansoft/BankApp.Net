@@ -8,7 +8,18 @@ namespace Exercises.Test
     public class HelloWorldExampleTest
     {
         [TestMethod]
-        public void HelloWorldExample_SayHelloToSomeone()
+        public void Example_HelloWorld_SayHelloToNoone()
+        {
+            // given we wish to say hello
+            HelloWorldExample testObject = new HelloWorldExample();
+            // when we meet no one
+            testObject.SetContactName(null);
+            // then just say hell with no errors or trailing spaces
+            Assert.AreEqual("hello", testObject.SayHello(), true);
+        }
+
+        [TestMethod]
+        public void Example_HelloWorld_SayHelloToSomeone()
         {
             // given we wish to say hello
             HelloWorldExample testObject = new HelloWorldExample();

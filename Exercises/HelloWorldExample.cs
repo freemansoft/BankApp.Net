@@ -17,7 +17,14 @@ namespace Exercises
 
         public string SayHello()
         {
-            return "Hello " + contactName;
+            if (contactName != null)
+            {
+                return "Hello " + contactName;
+            }
+            else
+            {
+                return "Hello";
+            }
         }
     }
 }

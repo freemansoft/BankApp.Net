@@ -1,8 +1,8 @@
-﻿Feature: HelloWorld
+﻿Feature: HelloWorldExample
 	
 
 @mytag
-Scenario: BDD Say Hello to Someone
+Scenario: Example - Hello World - Say Hello to Someone
 	Given I meet a person I wish to greet
 	And I know their name is "John"
 	When I greet them

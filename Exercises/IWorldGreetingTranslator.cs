@@ -8,6 +8,9 @@ namespace Exercises
 {
     public interface ILanguageTranslator
     {
-        string TranslateFromEnglish(string aString);
+        
+        string GenerateHelloGreeting(string language);
+
+        string GenerateGoodbyeGreeting(string language);
     }
 }
