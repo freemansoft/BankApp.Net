@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WorldGreeting.cs" />
     <Compile Include="HelloWorld.cs" />
+    <Compile Include="HelloWorldExample.cs" />
     <Compile Include="LanguageTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorldGreeting.cs" />
+    <Compile Include="WorldGreetingExample.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

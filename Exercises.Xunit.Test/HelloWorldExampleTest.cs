@@ -1,15 +1,16 @@
 ﻿using System;
 using Xunit;
+using Moq;
 
-namespace HelloWorld.Xunit.Test
+namespace Exercises.Xunit.Test
 {
-    public class HelloWorldXTest
+    public class HelloWorldExampleTest
     {
         [Fact]
-        public void TestMethod1()
+        public void SayHelloToSomeone()
         {
             // given we wish to say hello
-            HelloWorld testObject = new HelloWorld();
+            HelloWorldExample testObject = new HelloWorldExample();
             // when we meet someone
             testObject.seContactName("Smith");
             // then It should say "Hello" "ContactName" when I greet them

@@ -23,7 +23,7 @@ namespace HelloWorld.BDD.Test
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "HelloWorld.feature"
+#line 1 "HelloWorldExample.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]

@@ -2,21 +2,21 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
-namespace HelloWorld.BDD.Test
+namespace Exercises.BDD.Test
 {
     [Binding]
-    public class HelloWorldSteps
+    public class HelloWorldExampleExampleSteps
     {
         [Given(@"I meet a person I wish to greet")]
         public void GivenIMeetAPersonIWishToGreet()
         {
-            ScenarioContext.Current.Add("POI", new HelloWorld());
+            ScenarioContext.Current.Add("POI", new HelloWorldExample());
         }
         
         [Given(@"I know their name is ""(.*)""")]
         public void GivenIKnowTheirNameIs(string p0)
         {
-            HelloWorld testObject = ScenarioContext.Current.Get<HelloWorld>("POI");
+            HelloWorldExample testObject = ScenarioContext.Current.Get<HelloWorldExample>("POI");
             testObject.seContactName(p0);
             ScenarioContext.Current.Add("ContactName", p0);
         }
@@ -24,7 +24,7 @@ namespace HelloWorld.BDD.Test
         [When(@"I greet them")]
         public void WhenIGreetThem()
         {
-            HelloWorld testObject = ScenarioContext.Current.Get<HelloWorld>("POI");
+            HelloWorldExample testObject = ScenarioContext.Current.Get<HelloWorldExample>("POI");
             String result = testObject.sayHello();
             ScenarioContext.Current.Add("FullGreetingString", result);
         }

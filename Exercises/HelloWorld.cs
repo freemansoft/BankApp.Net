@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloWorld
+namespace Exercises
 {
-    public interface LanguageTranslator
+    public class HelloWorld
     {
-         string translateFromEnglish(string aString);
+
     }
 }

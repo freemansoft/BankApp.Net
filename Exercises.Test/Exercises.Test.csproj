@@ -54,17 +54,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelloWorldExampleTest.cs" />
     <Compile Include="HelloWorldTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorldGreetingTest.cs" />
+    <Compile Include="WorldGreetingExampleTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj">
+    <ProjectReference Include="..\Exercises\Exercises.csproj">
       <Project>{c0262181-90ca-46d6-84df-e256a1405152}</Project>
-      <Name>HelloWorld</Name>
+      <Name>Exercises</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

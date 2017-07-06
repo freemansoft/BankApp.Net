@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloWorld
+namespace Exercises
 {
-    public class HelloWorld
+    public class HelloWorldExample
     {
         String contactName = null;
 
