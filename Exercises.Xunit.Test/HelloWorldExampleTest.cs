@@ -12,9 +12,9 @@ namespace Exercises.Xunit.Test
             // given we wish to say hello
             HelloWorldExample testObject = new HelloWorldExample();
             // when we meet someone
-            testObject.seContactName("Smith");
+            testObject.SetContactName("Smith");
             // then It should say "Hello" "ContactName" when I greet them
-            Assert.Equal("hello smith", testObject.sayHello(), true);
+            Assert.Equal("hello smith", testObject.SayHello(), true);
 
         }
     }

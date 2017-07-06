@@ -20,26 +20,26 @@ namespace Exercises.Test
         [ExpectedException(typeof(ArgumentNullException))]
         public void WorldGreetingExample_NoNameProvided()
         {
-            Mock<LanguageTranslator> myTranslator = new Mock<LanguageTranslator>();
+            Mock<ILanguageTranslator> myTranslator = new Mock<ILanguageTranslator>();
             WorldGreetingExample testObject = new WorldGreetingExample(myTranslator.Object);
-            testObject.setContactName(null);
+            testObject.SetContactName(null);
         }
 
         [TestMethod]
         public void WorldGreetingExample_TestSpanish()
         {
-            Mock<LanguageTranslator> myTranslator = new Mock<LanguageTranslator>();
+            Mock<ILanguageTranslator> myTranslator = new Mock<ILanguageTranslator>();
             myTranslator.Setup(
-                c => c.translateFromEnglish(
+                c => c.TranslateFromEnglish(
                     It.Is<string>(s => s.Contains("hello"))))
                 .Returns("hola");
 
             // given we wish to say hello
             WorldGreetingExample testObject = new WorldGreetingExample(myTranslator.Object);
             // when we meet someone
-            testObject.setContactName("smith");
+            testObject.SetContactName("smith");
             // then It should say "Hello" "ContactName" when I greet them
-            Assert.AreEqual("hola smith".ToUpper(), testObject.sayGreeting().ToUpper(), true);
+            Assert.AreEqual("hola smith".ToUpper(), testObject.SayGreeting().ToUpper(), true);
         }
     }
 }

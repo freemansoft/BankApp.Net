@@ -8,36 +8,28 @@ namespace Exercises
 {
     public class WorldGreetingExample
     {
-        private LanguageTranslator lt;
+        private ILanguageTranslator lt;
 
         String contactName = null;
 
 
-        public WorldGreetingExample(LanguageTranslator aTranslator)
+        public WorldGreetingExample(ILanguageTranslator aTranslator)
         {
-            if (aTranslator == null)
-            {
-                throw new ArgumentNullException("Missing Translator Required");
-            }
-            this.lt = aTranslator;
+            this.lt = aTranslator ?? throw new ArgumentNullException("Missing Translator Required");
         }
 
         public WorldGreetingExample()
         {
         }
 
-        public void setContactName(string p0)
+        public void SetContactName(string p0)
         {
-            if (p0 == null)
-            {
-                throw new ArgumentNullException("Contact name required");
-            }
-            contactName = p0;
+            contactName = p0 ?? throw new ArgumentNullException("Contact name required");
         }
 
-        public string sayGreeting()
+        public string SayGreeting()
         {
-            return lt.translateFromEnglish("hello") +" "+contactName;
+            return lt.TranslateFromEnglish("hello") + " " + contactName;
         }
 
     }

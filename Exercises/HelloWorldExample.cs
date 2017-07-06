@@ -10,12 +10,12 @@ namespace Exercises
     {
         String contactName = null;
 
-        public void seContactName(string p0)
+        public void SetContactName(string p0)
         {
             contactName = p0;
         }
 
-        public string sayHello()
+        public string SayHello()
         {
             return "Hello " + contactName;
         }

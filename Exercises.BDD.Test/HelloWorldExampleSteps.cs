@@ -17,7 +17,7 @@ namespace Exercises.BDD.Test
         public void GivenIKnowTheirNameIs(string p0)
         {
             HelloWorldExample testObject = ScenarioContext.Current.Get<HelloWorldExample>("POI");
-            testObject.seContactName(p0);
+            testObject.SetContactName(p0);
             ScenarioContext.Current.Add("ContactName", p0);
         }
 
@@ -25,7 +25,7 @@ namespace Exercises.BDD.Test
         public void WhenIGreetThem()
         {
             HelloWorldExample testObject = ScenarioContext.Current.Get<HelloWorldExample>("POI");
-            String result = testObject.sayHello();
+            String result = testObject.SayHello();
             ScenarioContext.Current.Add("FullGreetingString", result);
         }
         

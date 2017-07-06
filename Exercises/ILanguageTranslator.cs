@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Exercises
 {
-    public interface LanguageTranslator
+    public interface ILanguageTranslator
     {
-         string translateFromEnglish(string aString);
+        string TranslateFromEnglish(string aString);
     }
 }

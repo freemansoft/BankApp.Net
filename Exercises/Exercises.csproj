@@ -43,7 +43,7 @@
     <Compile Include="WorldGreeting.cs" />
     <Compile Include="HelloWorld.cs" />
     <Compile Include="HelloWorldExample.cs" />
-    <Compile Include="LanguageTranslator.cs" />
+    <Compile Include="ILanguageTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorldGreetingExample.cs" />
   </ItemGroup>

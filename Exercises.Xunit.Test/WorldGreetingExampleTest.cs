@@ -16,26 +16,26 @@ namespace Exercises.Xunit.Test
         [Fact]
         public void NullName()
         {
-            Mock<LanguageTranslator> myTranslator = new Mock<LanguageTranslator>();
+            Mock<ILanguageTranslator> myTranslator = new Mock<ILanguageTranslator>();
             WorldGreetingExample testObject = new WorldGreetingExample(myTranslator.Object);
-            Exception ex = Assert.Throws<ArgumentNullException>(() => testObject.setContactName(null));
+            Exception ex = Assert.Throws<ArgumentNullException>(() => testObject.SetContactName(null));
         }
 
 
         [Fact]
         public void TestSpanish()
         {
-            Mock<LanguageTranslator> myTranslator = new Mock<LanguageTranslator>();
+            Mock<ILanguageTranslator> myTranslator = new Mock<ILanguageTranslator>();
             myTranslator.Setup(
-                c => c.translateFromEnglish(It.Is<string>(s => s.Contains("hello"))))
+                c => c.TranslateFromEnglish(It.Is<string>(s => s.Contains("hello"))))
                 .Returns("hola");
 
             // given we wish to say hello
             WorldGreetingExample testObject = new WorldGreetingExample(myTranslator.Object);
             // when we meet someone
-            testObject.setContactName("smith");
+            testObject.SetContactName("smith");
             // then It should say "Hello" "ContactName" when I greet them
-            Assert.Equal("hola smith".ToUpper(), testObject.sayGreeting().ToUpper(), true);
+            Assert.Equal("hola smith".ToUpper(), testObject.SayGreeting().ToUpper(), true);
         }
 
     }
