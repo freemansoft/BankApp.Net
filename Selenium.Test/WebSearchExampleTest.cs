@@ -80,7 +80,7 @@ namespace Selenium.Test
             // find the link again and click on it to go to the home page
             IWebElement link = wait.Until(d => d.FindElement(By.LinkText(desiredLinkText)));
             link.Click();
-            StringAssert.Contains(driver.Title, "FreemanSoft Inc");
+            StringAssert.Contains(driver.Title, "FreemanSoft");
         }
 
         [TestMethod]
