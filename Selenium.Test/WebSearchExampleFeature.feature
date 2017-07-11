@@ -6,12 +6,12 @@ Feature: Basic Google Search
 
 Scenario: Example - Search with Google
 	Given I want to search with "google"
-	When When I search for "freemansoft"
+	When When I search for "microsoft"
 	Then My search term should be in the title bar
 
 Scenario: Example - Search with Bing
 	Given I want to search with "bing"
-	When When I search for "freemansoft"
+	When When I search for "microsoft"
 	Then My search term should be in the title bar
 
 Scenario Outline: Example - Search and Title Matches
