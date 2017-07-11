@@ -12,7 +12,7 @@ The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud
   * Install the following extensions. You can try and install these from "tools and options" but I had to download this extension and install it from outside VS2017 community.  
     * [SpecFlow for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=TechTalkSpecFlowTeam.SpecFlowforVisualStudio2017)
     * [GitHub for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio) (optional)
-	
+    
 # Mac Users
   * TBD
 
@@ -23,10 +23,13 @@ The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud
     * The library and test projects for the Banking class exercise.  
     * Example files include "example" in the names. Other files are stubs for exercises
   * Exercises
-    * The library, MSTest and Specflow test projects for the HelloWorld, StringSet and any other TDD class exercises other than "Bank"
+    * The library, MSTest, [moq](https://github.com/moq) and [Specflow](http://specflow.org/) test projects for the HelloWorld, StringSet and any other TDD class exercises other than "Bank"
     * Example files include "example" in the names. Other files are stubs for exercises
   * Selenium
     * A place to put Selenium based web test exercises.
     * Example files include "example" in the names. Other files are stubs for exercises
 
+
+# Links
+  * [Moq Tutorial](https://github.com/Moq/moq4/wiki/Quickstart)
 
