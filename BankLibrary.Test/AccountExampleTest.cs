@@ -75,6 +75,7 @@ namespace BankLibrary.Test
         }
         
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
         public void CheckNullFirstName()
         {
             AccountExample testObject = new AccountExample();
