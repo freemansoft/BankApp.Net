@@ -61,7 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PoPExampleSearchResultPage.cs" />
+    <Compile Include="PoPExampleSearchPage.cs" />
+    <Compile Include="PoPExampleTargetPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PoPExampleTest.cs" />
     <Compile Include="WebSearchExampleFeature.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

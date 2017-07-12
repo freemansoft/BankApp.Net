@@ -17,19 +17,31 @@ The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud
   * TBD
 
 # Projects
-  * BankApp
-    * The default ASP.Net Bank App demo. This is included in case we wish to deploy an application into the cloud.  It is not tied to the other projects.
-  * BankLibrary
-    * The library and test projects for the Banking class exercise.  
-    * Example files include "example" in the names. Other files are stubs for exercises
   * Exercises
-    * The library, MSTest, [moq](https://github.com/moq) and [Specflow](http://specflow.org/) test projects for the HelloWorld, StringSet and any other TDD class exercises other than "Bank"
+    * Class library, MSTest, [moq](https://github.com/moq) and [Specflow](http://specflow.org/) test projects for the HelloWorld, StringSet and any other TDD class exercises other than "Bank"
+      * Exercies: StringSet and HelloWorld exercies classes
+      * Exercises.Test: StringSet and HelloWorld test classes
+      * Exercises.BDD.Test: SpecFlow feature and step files executed with MSTest
+    * Example files include "example" in the names. Other files are stubs for exercises
+  * BankLibrary
+    * Class library and test projects for the Banking class exercise.  
+      * BankLibrary: Banking exercise classes
+      * BankLibrary.Test: MSTest test classes
+      * BankLibrary.BDD.Test: Specflow feature and step files executed with MSTest
     * Example files include "example" in the names. Other files are stubs for exercises
   * Selenium
     * A place to put Selenium based web test exercises.
+      * Selenium.Test: Specflow feature and step files executed with MSTest
     * Example files include "example" in the names. Other files are stubs for exercises
+  * BankApp
+    * The default ASP.Net Bank App demo. This is included in case we wish to deploy an application into the cloud.  It is not tied to the other projects.
+      * BankApp: ASP.Net web application
+      * BankApp.Tests: MSTest classes
+
 
 
 # Links
   * [Moq Tutorial](https://github.com/Moq/moq4/wiki/Quickstart)
+  * [Selenium Page Patter on Pluralsight](https://www.pluralsight.com/guides/software-engineering-best-practices/getting-started-with-page-object-pattern-for-your-selenium-tests)
+
 
