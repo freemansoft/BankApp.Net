@@ -10,8 +10,8 @@ namespace Selenium.Test
 {
     class PoPExampleSearchPage
     {
-        public static string Google = "http://www.google.com";
-        public static string Bing = "http://www.bing.com";
+        public static string Google = "https://www.google.com";
+        public static string Bing = "https://www.bing.com";
 
         private IWebDriver driver;
         private WebDriverWait wait;

@@ -6,7 +6,7 @@ The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud
 
 # Windows Users
   * Install Visaual Studio 2017 (any version)
-    * The following workloads are required: This will require 5GB if using VS 2017 Community
+    * The following workloads are required: This will require 6.5GB of disk space if using VS 2017 Community
     * .Net desktop development
     * ASP.net and web development
   * Install the following extensions. You can try and install these from "tools and options" but I had to download this extension and install it from outside VS2017 community.  

@@ -38,7 +38,7 @@ namespace Selenium.Test
         public void GivenIWantToSearchWithGoogle(string p0)
         {
             IWebDriver driver = ScenarioContext.Current.Get<IWebDriver>("driver");
-            driver.Navigate().GoToUrl("http://www." + p0 + ".com");
+            driver.Navigate().GoToUrl("https://www." + p0 + ".com");
         }
 
 

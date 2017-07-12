@@ -45,7 +45,7 @@ namespace Selenium.Test
         public void Example_SearchForFreemanSoft()
         {
             string desiredLinkText = "FreemanSoft Inc";
-            driver.Navigate().GoToUrl("http://www.google.com");
+            driver.Navigate().GoToUrl("https://www.google.com");
             IWebElement queryField = driver.FindElement(By.Name("q"));
             queryField.SendKeys("freemansoft");
             queryField.Submit();
@@ -63,7 +63,7 @@ namespace Selenium.Test
         public void Example_SearchForAmazon()
         {
             string desiredLinkText = "Amazon.com® Official Site";
-            driver.Navigate().GoToUrl("http://www.google.com");
+            driver.Navigate().GoToUrl("https://www.google.com");
             IWebElement queryField = driver.FindElement(By.Name("q"));
             queryField.SendKeys("amazon");
             queryField.Submit();
