@@ -41,14 +41,14 @@ namespace Selenium.Test
         //
 
         [TestMethod]
-        public void Example_SearchForAndGoToFreemanSoft()
+        public void Example_SearchForAndGoToLinkedIn()
         {
-            string desiredSearchString = "freemansoft";
-            string desiredLinkText = "FreemanSoft Inc";
+            string desiredSearchString = "linkedin";
+            string desiredLinkText = "LinkedIn";
             PoPExampleSearchResultPage Result = new PoPExampleSearchPage(driver, wait, PoPExampleSearchPage.Google).SearchFor(desiredSearchString);
-            StringAssert.Contains(Result.WaitForLinkText(desiredLinkText, true).Title(), desiredSearchString);
-            PoPExampleTargetPage Target = Result.GoToPageLinkText(desiredLinkText, true);
-            StringAssert.Contains(Target.Title(), "FreemanSoft");
+            StringAssert.Contains(Result.WaitForLinkText(desiredLinkText, false).Title(), desiredSearchString);
+            PoPExampleTargetPage Target = Result.GoToPageLinkText(desiredLinkText, false);
+            StringAssert.Contains(Target.Title(), "LinkedIn");
         }
 
         [TestMethod]
