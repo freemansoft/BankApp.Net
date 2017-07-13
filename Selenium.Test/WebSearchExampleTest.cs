@@ -62,7 +62,8 @@ namespace Selenium.Test
         [TestMethod]
         public void Example_SearchForAmazon()
         {
-            string desiredLinkText = "Amazon.com® Official Site";
+            // find a link - try to not used a sponsored ad because those change
+            string desiredLinkText = "Amazon.com: Online Shopping";
             driver.Navigate().GoToUrl("https://www.google.com");
             IWebElement queryField = driver.FindElement(By.Name("q"));
             queryField.SendKeys("amazon");
