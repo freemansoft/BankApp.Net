@@ -1,5 +1,7 @@
 # BankApp.net
 
+hELLO,
+
 This Workshop lab assumes you have an IDE and runtime that supports .Net Framework.  
 Visual studio on Windows is the most obvious candidate for this.  
 The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud provider
