@@ -42,21 +42,21 @@ namespace Selenium.Test
         //
 
         [TestMethod]
-        public void Example_SearchForFreemanSoft()
+        public void Example_SearchForLinkedIn()
         {
-            string desiredLinkText = "FreemanSoft Inc";
+            string desiredLinkText = "LinkedIn:";
             driver.Navigate().GoToUrl("https://www.google.com");
             IWebElement queryField = driver.FindElement(By.Name("q"));
-            queryField.SendKeys("freemansoft");
+            queryField.SendKeys("linkedin");
             queryField.Submit();
             // wait until a link for the search term shows up before doing anything else
-            Assert.IsNotNull(wait.Until(d => d.FindElement(By.LinkText(desiredLinkText))));
+            Assert.IsNotNull(wait.Until(d => d.FindElement(By.PartialLinkText(desiredLinkText))));
             // google puts search term in title bar after search
-            StringAssert.Contains(driver.Title, "freemansoft");
+            StringAssert.Contains(driver.Title, "linkedin");
             // find the link again and click on it to go to the home page
-            IWebElement link = wait.Until(d => d.FindElement(By.LinkText(desiredLinkText)));
+            IWebElement link = wait.Until(d => d.FindElement(By.PartialLinkText(desiredLinkText)));
             link.Click();
-            StringAssert.Contains(driver.Title, "FreemanSoft");
+            StringAssert.Contains(driver.Title, "LinkedIn");
         }
 
         [TestMethod]
