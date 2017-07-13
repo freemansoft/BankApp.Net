@@ -43,5 +43,6 @@ The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud
 # Links
   * [Moq Tutorial](https://github.com/Moq/moq4/wiki/Quickstart)
   * [Selenium Page Patter on Pluralsight](https://www.pluralsight.com/guides/software-engineering-best-practices/getting-started-with-page-object-pattern-for-your-selenium-tests)
+  * [Code Style Analysis](https://blogs.msdn.microsoft.com/dotnet/2016/12/15/code-style-configuration-in-the-vs2017-rc-update/)
 
 

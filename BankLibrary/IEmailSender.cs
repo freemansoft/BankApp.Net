@@ -11,6 +11,6 @@ namespace BankLibrary
     /// </summary>
     public interface IEmailSender
     {
-        bool sendEmail(string to, string subject, string message);
+        bool SendEmail(string to, string subject, string message);
     }
 }

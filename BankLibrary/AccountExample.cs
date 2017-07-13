@@ -98,7 +98,7 @@ namespace BankLibrary
             {
                 if (emailSender != null)
                 {
-                    emailSender.sendEmail("foo@bar.com", "debit denied due to insufficient funds", " balance " + AccountBalance + "debit request " + debitAmount);
+                    emailSender.SendEmail("foo@bar.com", "debit denied due to insufficient funds", " balance " + AccountBalance + "debit request " + debitAmount);
                 }
                 throw new ArgumentException("Unable to debit " + debitAmount + "because balance is " + AccountBalance);
             }

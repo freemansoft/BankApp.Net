@@ -60,7 +60,7 @@ namespace BankLibrary.Test
         #endregion
 
         [TestMethod]
-        public void CreateCheckingAccountWithZeroBalance()
+        public void Example_CreateCheckingAccountWithZeroBalance()
         {
             AccountExample testObject = new AccountExample(null);
             testObject.SetFirstName("John");
@@ -77,7 +77,7 @@ namespace BankLibrary.Test
         
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void CheckNullFirstName()
+        public void Example_CheckNullFirstName()
         {
             AccountExample testObject = new AccountExample(null);
             testObject.SetFirstName(null);
@@ -86,7 +86,7 @@ namespace BankLibrary.Test
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void OverdraftException()
+        public void Example_OverdraftException()
         {
             Mock<IEmailSender> myMock = new Mock<IEmailSender>();
              AccountExample testObject = new AccountExample(null);
@@ -95,10 +95,10 @@ namespace BankLibrary.Test
         }
 
         [TestMethod]
-            public void OverdraftEmail()
+            public void Example_OverdraftEmail()
         {
             Mock<IEmailSender> myMock = new Mock<IEmailSender>();
-            myMock.Setup(c => c.sendEmail(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+            myMock.Setup(c => c.SendEmail(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
                 .Returns(true);
             AccountExample testObject = new AccountExample(myMock.Object);
             testObject.SetFirstName("Bill").SetLastName("Gates").SetupAccount();
@@ -116,7 +116,7 @@ namespace BankLibrary.Test
             }
             // we ate the exception so go back and verify that the mock was invoked to send email
             myMock.Verify(
-                m => m.sendEmail(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()),
+                m => m.SendEmail(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()),
                 Times.Once);
         }
 
