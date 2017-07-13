@@ -76,6 +76,16 @@ namespace BankLibrary.Test
         }
         
         [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Example_AccountNumberInvalid()
+        {
+            AccountExample testObject = new AccountExample(null);
+            testObject.SetFirstName("John");
+            testObject.SetLastName("Smith");
+            testObject.GetAccountNumber();
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void Example_CheckNullFirstName()
         {

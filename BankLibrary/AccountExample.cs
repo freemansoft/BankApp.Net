@@ -54,7 +54,7 @@ namespace BankLibrary
 
         public AccountExample SetupAccount()
         {
-            ValidateState();
+            ValidateState(false);
             AccountNumber = Guid.NewGuid().ToString();
             AccountBalance = Decimal.Zero;
             return this; ;
@@ -62,48 +62,55 @@ namespace BankLibrary
 
         public string GetAccountNumber()
         {
-            ValidateState();
+            ValidateState(true);
             // should we throw an exception if an account doesn't exist?
             return AccountNumber;
         }
 
         public decimal GetBalance()
         {
-            ValidateState();
+            ValidateState(true);
             return AccountBalance;
         }
 
 
-        private void ValidateState()
+        private void ValidateState(bool postSetup)
         {
             if (firstName == null)
             {
-                throw new ArgumentException("first name cannot be null");
+                throw new InvalidOperationException("first name cannot be null");
             }
             if (lastName == null)
             {
-                throw new ArgumentException("last name cannot be null");
+                throw new InvalidOperationException("last name cannot be null");
             }
-        }
-
-        public decimal Deposit(decimal depositAmount)
-        {
-            AccountBalance += depositAmount;
-            return AccountBalance;
-        }
-
-        public decimal Debit(decimal debitAmount)
-        {
-            if (debitAmount > AccountBalance)
+            if (postSetup)
             {
-                if (emailSender != null)
+                if (AccountNumber == null)
                 {
-                    emailSender.SendEmail("foo@bar.com", "debit denied due to insufficient funds", " balance " + AccountBalance + "debit request " + debitAmount);
+                    throw new InvalidOperationException("last name cannot be null");
                 }
-                throw new ArgumentException("Unable to debit " + debitAmount + "because balance is " + AccountBalance);
             }
-            AccountBalance -= debitAmount;
-            return AccountBalance;
+        }
+
+            public decimal Deposit(decimal depositAmount)
+            {
+                AccountBalance += depositAmount;
+                return AccountBalance;
+            }
+
+            public decimal Debit(decimal debitAmount)
+            {
+                if (debitAmount > AccountBalance)
+                {
+                    if (emailSender != null)
+                    {
+                        emailSender.SendEmail("foo@bar.com", "debit denied due to insufficient funds", " balance " + AccountBalance + "debit request " + debitAmount);
+                    }
+                    throw new ArgumentException("Unable to debit " + debitAmount + "because balance is " + AccountBalance);
+                }
+                AccountBalance -= debitAmount;
+                return AccountBalance;
+            }
         }
     }
-}
