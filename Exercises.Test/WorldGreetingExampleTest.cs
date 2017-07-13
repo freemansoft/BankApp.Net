@@ -5,7 +5,7 @@ using Moq;
 namespace Exercises.Test
 {
     [TestClass]
-    public class WorldGreetingExmapleTest
+    public class WorldGreetingExampleTest
     {
 
         [TestMethod]
