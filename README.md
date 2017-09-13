@@ -39,6 +39,11 @@ The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud
       * BankApp.Tests: MSTest classes
 
 
+# Troubleshooting
+An exception occurred while invoking executor 'executor://mstestadapter/v2': Constructor on type 'Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.Execution.UnitTestRunner' not found.
+
+Clear the Cache. See: [Stack Overflow](https://stackoverflow.com/questions/45444266/couldnt-run-tests-after-updating-testframework-in-nuget)
+
 
 # Links
   * [Moq Tutorial](https://github.com/Moq/moq4/wiki/Quickstart)

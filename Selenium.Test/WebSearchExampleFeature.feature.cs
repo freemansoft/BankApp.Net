@@ -23,8 +23,22 @@ namespace Selenium.Test
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
+        private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
+        
 #line 1 "WebSearchExampleFeature.feature"
 #line hidden
+        
+        public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
+        {
+            get
+            {
+                return this._testContext;
+            }
+            set
+            {
+                this._testContext = value;
+            }
+        }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
@@ -61,6 +75,7 @@ namespace Selenium.Test
         public virtual void ScenarioSetup(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioStart(scenarioInfo);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Microsoft.VisualStudio.TestTools.UnitTesting.TestContext>(TestContext);
         }
         
         public virtual void ScenarioCleanup()
