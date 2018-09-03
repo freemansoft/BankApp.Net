@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercises
 {
+    /// <summary>
+    /// Simple Hello World that accepts a parameter
+    /// </summary>
     public class HelloWorldExample
     {
         String contactName = null;

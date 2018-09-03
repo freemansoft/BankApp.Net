@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercises
 {
+    /// <summary>
+    /// Empty class that can be used when doing hello world
+    /// </summary>
     public class HelloWorld
     {
 

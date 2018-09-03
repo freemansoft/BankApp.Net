@@ -8,14 +8,18 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Selenium.Test
 {
+    /// <summary>
+    /// Example:
+    /// Page Object Pattern - Methods representing search page
+    /// </summary>
     class PoPExampleSearchPage
     {
         public static string Google = "https://www.google.com";
         public static string Bing = "https://www.bing.com";
 
-        private IWebDriver driver;
-        private WebDriverWait wait;
-        private string searchEngine;
+        private readonly IWebDriver driver;
+        private readonly WebDriverWait wait;
+        private readonly string searchEngine;
 
         public PoPExampleSearchPage(IWebDriver driver, WebDriverWait wait, string searchEngine)
         {

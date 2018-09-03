@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercises
 {
+    /// <summary>
+    /// Mockable interface used in StringSetExample.cs
+    /// </summary>
     public interface IStringConverter
     {
         /// <summary>

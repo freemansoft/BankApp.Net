@@ -8,6 +8,10 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Selenium.Test
 {
+    /// <summary>
+    /// Example:
+    /// Page Object Pattern - Methods representing search results
+    /// </summary>
     class PoPExampleSearchResultPage
     {
         private IWebDriver driver;

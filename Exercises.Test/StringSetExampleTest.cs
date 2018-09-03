@@ -4,6 +4,9 @@ using Moq;
 
 namespace Exercises.Test
 {
+    /// <summary>
+    /// Example tests for StringSetExample.cs
+    /// </summary>
     [TestClass]
     public class StringSetExampleTest
     {

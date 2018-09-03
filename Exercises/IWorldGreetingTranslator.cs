@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercises
 {
+    /// <summary>
+    /// Mockable Interface used in WorldGreetingExample
+    /// </summary>
     public interface ILanguageTranslator
     {
         

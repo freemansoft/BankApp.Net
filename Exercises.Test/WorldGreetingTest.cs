@@ -4,6 +4,9 @@ using Moq;
 
 namespace Exercises.Test
 {
+    /// <summary>
+    /// Empty test file that can be used with WorldGreeting.cs
+    /// </summary>
     [TestClass]
     public class WorldGreetingTest
     {

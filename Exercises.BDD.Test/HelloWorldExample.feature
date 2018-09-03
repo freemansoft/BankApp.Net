@@ -1,7 +1,7 @@
 ﻿Feature: HelloWorldExample
 	
 
-@mytag
+@mstest
 Scenario: Example - Hello World - Say Hello to Someone
 	Given I meet a person I wish to greet
 	And I know their name is "John"

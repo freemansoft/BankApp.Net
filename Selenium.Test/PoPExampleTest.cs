@@ -7,6 +7,10 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Selenium.Test
 {
+    /// <summary>
+    /// Selenium tests that use these PageObjectPattern objects:
+    ///     PoPExamplesearchPage, PoPExampleSearchResultsPage and PoPExampleTargetPage
+    /// </summary>
     [TestClass]
     public class PoPExampleTest
     {
@@ -19,7 +23,6 @@ namespace Selenium.Test
         [TestInitialize()]
         public void MyTestInitialize()
         {
-            //driver = new ChromeDriver();
             // https://code.google.com/p/selenium/wiki/InternetExplorerDriver#Required_Configuration
             var options = new InternetExplorerOptions
             {
@@ -27,7 +30,6 @@ namespace Selenium.Test
             };
             //driver = new InternetExplorerDriver(options);
             //driver = new InternetExplorerDriver();
-            //driver = new ChromeDriver();
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
@@ -45,10 +47,12 @@ namespace Selenium.Test
         {
             string desiredSearchString = "linkedin";
             string desiredLinkText = "LinkedIn";
+            // run the search
             PoPExampleSearchResultPage Result = new PoPExampleSearchPage(driver, wait, PoPExampleSearchPage.Google).SearchFor(desiredSearchString);
             StringAssert.Contains(Result.WaitForLinkText(desiredLinkText, false).Title(), desiredSearchString);
+            // click the link using the search results object.
             PoPExampleTargetPage Target = Result.GoToPageLinkText(desiredLinkText, false);
-            StringAssert.Contains(Target.Title(), "LinkedIn");
+            StringAssert.Contains(Target.Title(), "LinkedIn", "Could not find Amazon in " + Target.Title());
         }
 
         [TestMethod]
@@ -59,7 +63,7 @@ namespace Selenium.Test
             PoPExampleSearchResultPage Result = new PoPExampleSearchPage(driver, wait, PoPExampleSearchPage.Google).SearchFor(desiredSearchString);
             StringAssert.Contains(Result.WaitForLinkText(desiredLinkText, false).Title(), desiredSearchString);
             PoPExampleTargetPage Target = Result.GoToPageLinkText(desiredLinkText, false);
-            StringAssert.Contains(Target.Title(), "Amazon");
+            StringAssert.Contains(Target.Title(), "Amazon","Could not find Amazon in "+Target.Title());
         }
     }
 }
