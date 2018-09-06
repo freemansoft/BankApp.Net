@@ -4,7 +4,7 @@
 These Attributes are applied to _test classes_ and picked up as part of test processing.
 
 |Construct|Annotation Target|Purpose|Sample Signature|
-|===|===|===|===|
+|---|---|---|---|
 |[TestClass]|Class|Identifies a test class| public class Foo{}|
 | | | | |
 |[AssemblyInitialize]|Static Method|Invoke one time on assembly load|public static void AssemblyInit(TestContext context)|
