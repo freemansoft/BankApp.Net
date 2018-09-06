@@ -11,7 +11,7 @@ using TechTalk.SpecFlow;
 namespace Selenium.Test
 {
     /// <summary>
-    /// Example Step functions for WebSearchExampleFeature.feeature
+    /// Example Step functions for BDDExampleWebSearch.feature
     /// </summary>
     [Binding]
     public class BDDExampleWebSearchSteps
