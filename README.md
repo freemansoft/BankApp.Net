@@ -5,17 +5,18 @@ Visual studio on Windows is the most obvious candidate for this.
 The simplest thing for Mac users is to run a Windows VM on the Mac or in a cloud provider
 
 # Windows Users
-The project is currently bound to .Net 4.7 with the expectation that teams will be running Windows 10.
-The solution can probably be targeted at earlier versions of .Net without any issues
+The project is currently bound to .Net _4.7 Framework_ with the expectation that teams will be running Windows 10.
+The solution can probably be targeted at earlier versions of .Net.
 
   * Install Visual Studio 2017 (any version)
-    * The following workloads are required: This will require 6.5GB of disk space if using VS 2017 Community
+    * The following installation workloads are required: This will require 6.5GB of disk space if using VS 2017 Community
+      * Verify that .Net 4.7 is one of the packages being installed. 
       * .Net desktop development
       * ASP.net and web development
         * This is to support BankApp and BankApp.Tests. You can remove this dependency if you delete those projects.
   * Install the following Visual Studio extensions. You can try and install these from "tools and options" but I had to download this extension and install it from outside VS2017 community.  
     * [SpecFlow for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=TechTalkSpecFlowTeam.SpecFlowforVisualStudio2017)
-    * [GitHub for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio) (optional)
+    * [GitHub for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio) _not required if just downloading ZIP file_ 
     
 # Mac Users
   * TBD
@@ -46,7 +47,7 @@ Class library and test projects for the Banking class exercise.
 ## Selenium ##
 A place to put Selenium based web test exercises.
   * **Selenium.Test**: Specflow feature and step files executed with MSTest
-    * **BDDExample... **demonstrates SpecFlow style BDD
+    * **BDDExample...** demonstrates SpecFlow style BDD
     * **ExampleWebSearchTest** demonstrates selenium tests directly using the API
     * **PoPExample...** Demonstrate one style of PageObjectPattern
 
@@ -58,9 +59,13 @@ The default ASP.Net Bank App demo. This is included in case we wish to deploy an
 
 
 # Troubleshooting
-An exception occurred while invoking executor 'executor://mstestadapter/v2': Constructor on type 'Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.Execution.UnitTestRunner' not found.
 
-Clear the Cache. See: [Stack Overflow](https://stackoverflow.com/questions/45444266/couldnt-run-tests-after-updating-testframework-in-nuget)
+1) **Problem** An exception occurred while invoking executor 'executor://mstestadapter/v2': Constructor on type 'Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.Execution.UnitTestRunner' not found.
+  **Solution** Clear the Cache. See: [Stack Overflow](https://stackoverflow.com/questions/45444266/couldnt-run-tests-after-updating-testframework-in-nuget)
+1) **Problem** Itellisense in a test project for project doesn't display info for any classes residing in the source project.
+  **Solution** Remove the source project from the test project's list of references.  Then re-add the source project reference.
+1) **Problem** Itellisense in a test project for project doesn't display info for any MSTestclasses like Assert.
+  **Solution** Remove the source project from the test project's list of references.  Then re-add the source project reference.
 
 
 # Links
